@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="heading">
+          <h3>Mortgage Calculator</h3>
+          <a href="#" class="align-text">clear all</a>
+        </div>
+        <div id="mortgage-amount-form">
+          <label for="mortgage-amount">Mortgage Amount:</label>
+          <div class="currency-input">
+            <input
+              type="text"
+              id="mortgage-amount"
+              name="mortgage_amount"
+              required
+            />
+          </div>
+        </div>
+        <div class="half-width-inputs">
+          <div class="mortgage-term-input">
+            <label for="mortgage-term">Mortgage Term:</label>
+            <div class="input-with-symbol" data-symbol="years">
+              <input
+                type="text"
+                id="mortgage-term"
+                name="mortgage_term"
+                required
+              />
+            </div>
+          </div>
+          <div class="interest-rate-input">
+            <label for="interest-rate">Interest Rate:</label>
+            <div class="input-with-symbol" data-symbol="%">
+              <input
+                type="text"
+                id="interest-rate"
+                name="interest_rate"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <h3>Mortgage Type</h3>
+        <div class="radio-group">
+          <label class="radio-box">
+            <input type="radio" name="loan-type" value="repayment" />
+            Repayment
+          </label>
+          <label class="radio-box">
+            <input type="radio" name="loan-type" value="interest-only" />
+            Interest Only
+          </label>
+        </div>
+        <button class="repayments">
+          <i class="fa fa-calculator"></i>Calculate Repayments
+        </button>
+      </div>
+      <!-- Right  -->
+      <div class="right">
+        <img
+          class="illustration-empty"
+          src="Images\illustration-empty.svg"
+          alt="Calculator"
+        />
+        <h2>Results shown here</h2>
+        <h4>
+          Complete the form and click "Calculate repayments" to see what your
+          monthly repayments would be.
+        </h4>
+      </div>
+    </div>
+    <script src="logic.js"></script>
+  </body>
+</html>

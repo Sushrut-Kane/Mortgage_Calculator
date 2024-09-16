@@ -1,0 +1,273 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(227, 244, 252);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 80vh;
+  /* padding: 10px; */
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+.left {
+  width: 60%; /* Adjusted width */
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 20px;
+}
+
+.right {
+  width: 60%; /* Adjusted width */
+  background-color: rgb(18, 49, 64);
+  border-bottom-left-radius: 140px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 56, 79);
+}
+
+.heading h3 {
+  margin: 0; /* Remove default margin */
+  padding-right: 10px;
+}
+
+.align-text {
+  margin-left: auto; /* Pushes the text to the right */
+  color: rgb(109, 122, 125);
+}
+
+#mortgage-amount-form {
+  margin: 10px 0;
+}
+
+#mortgage-amount-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: rgb(131, 143, 145);
+}
+
+.currency-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.currency-input input {
+  /* Style the input field itself */
+  padding-left: 10%; /* Space for the currency symbol */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.currency-input::before {
+  content: "£";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: rgb(225, 247, 250);
+  color: rgb(105, 129, 140);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-sizing: border-box;
+}
+
+.half-width-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.half-width-inputs .mortgage-term-input,
+.half-width-inputs .interest-rate-input {
+  width: 48%; /* Adjusted width for two inputs to fit side by side */
+}
+
+.half-width-inputs .mortgage-term-input label,
+.half-width-inputs .interest-rate-input label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: rgb(131, 143, 145);
+}
+
+.input-with-symbol {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: rgb(167, 167, 167);
+}
+
+.input-with-symbol input {
+  padding-right: 10%; /* Space for the symbol */
+  border: 1px solid rgb(178, 178, 178);
+  border-radius: 4px;
+  font-size: 16px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 100%; /* Make the input field full width */
+}
+
+.input-with-symbol::before {
+  content: attr(data-symbol);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(225, 247, 250);
+  color: #393939;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 400px;
+}
+
+.radio-box input[type="radio"] {
+  margin-right: 10px;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.radio-box input[type="radio"]:checked {
+  background-color: #c8ff00;
+  border-color: #b3ff00;
+}
+
+.radio-box input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.radio-box:hover {
+  background-color: #f9f9f9;
+  border-color: #888;
+}
+.radio-box:focus-within {
+  background-color: #ebffa4;
+  border-color: #c8ff00;
+}
+.repayments {
+  margin-top: 55px;
+  background-color: rgb(217, 220, 44);
+  color: rgb(0, 0, 55);
+  border: none;
+  height: 36px;
+  width: 328px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.repayments:hover {
+  opacity: 0.8;
+}
+
+.repayments:active {
+  opacity: 0.4;
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+.illustration-empty {
+  max-width: 100%;
+  max-height: 100%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 45%;
+}
+
+.right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.illustration-empty {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.right h4 {
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+/* #FAFAE1 */
